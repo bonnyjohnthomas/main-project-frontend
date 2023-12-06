@@ -1,0 +1,35 @@
+.carousel-item {
+    height: 600px;
+    
+}
+
+
+.list-group-item{
+    background-color:rgb(170, 231, 170); 
+}
+
+
+ .card img:hover{
+transform: scale(1.1);
+transition: 2s;
+}
+
+
+.card-title{
+    text-align: center;
+   
+}
+
+#heading{
+    background-color: rgb(137, 219, 137);
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+  
+}
+
+#alllocations{
+    width:1000px;
+    margin-left: 180px;
+    
+}

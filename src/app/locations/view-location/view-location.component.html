@@ -1,0 +1,77 @@
+<!-- <section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img [src]="location.image" class="card-img-top mb-1 mb-md-0"  alt="..." /></div>
+            <div class="col-md-6">
+                <div class="small mb-1">Id: &nbsp;  {{location.id}}</div>
+                <h1 class="display-5 fw-bolder">Name: &nbsp;  {{location.name}}</h1>
+                <div class="fs-5 mb-5">
+                    <span >{{location.category}}</span>                    
+                </div>
+                <p class="lead " style="text-align: justify;">{{location.description}}</p> 
+                
+
+                <div class="d-flex justify-content-between mt-2">
+
+                    <button  class="btn btn-outline-dark flex-shrink-0 mt-4" type="button">
+                        <i class="fa-sharp fa-solid fa-bookmark"></i> &nbsp;
+                        Save to Bucket List
+                    </button>
+
+                    
+
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+ <!-- Page Content-->
+ <div class="container px-4 px-lg-5">
+    <!-- Heading Row-->
+    <div class="row gx-4 gx-lg-5 align-items-center my-5">
+        <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" [src]="location.image" alt="..." /></div>
+        <div class="col-lg-5">
+            <h1 class="font-weight-light">{{location.name}}</h1>
+            <p style="text-align: justify;">{{location.description }}</p>
+            <button (click)="addToBucketlist()"  class="btn btn-outline-dark flex-shrink-0 mt-4" type="button">
+                <i class="fa-sharp fa-solid fa-bookmark"></i> &nbsp;
+                Save to Bucket List
+            </button>
+        </div>
+    </div>
+    <!-- Call to Action-->
+    <div class="card text-white bg-success my-5 py-4 text-center">
+        <div class="card-body"><p class="text-white m-0"><b style="font-size:xx-large;">Location</b> <br> <br> {{location.location}}</p></div>
+    </div>
+    <!-- Content Row-->
+    <div class="row gx-4 gx-lg-5">
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h2 class="card-title"> Category</h2> <hr> 
+                    <p class="card-text">{{location.category}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h2 class="card-title">Timing</h2> <hr>
+                    <p class="card-text">{{location.timing}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h2 class="card-title">Contact</h2> <hr>
+                    <p class="card-text ">{{location.contact}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

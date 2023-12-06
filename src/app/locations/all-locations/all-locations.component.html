@@ -1,0 +1,61 @@
+<!-- <h1 class="text-center mt-4">Pathanamthitta Tourism</h1> -->
+
+<!-- <div class="container-fluid">
+  
+</div> -->
+<!-- -------------corousel-------------- -->
+<div id="carouselExampleControls" class="carousel slide mb-3" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="c1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Kerala_boatrace.jpg/500px-Kerala_boatrace.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img class="c1" src="https://www.keralatourism.org/images/picture/hri/Gavi_1822.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img class="c1" src="https://static.india.com/wp-content/uploads/2021/11/Sabarimala-PTI.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- ------Major Attractions-------- -->
+
+  <div class="container" id="heading">
+    <h1 class="text-center  text-dark m-2 " >Major Attractions</h1>
+  </div>
+
+  <!-- -------All Locations----------- -->
+
+  <div id="alllocations" class="row row-cols-1 row-cols-md-2 g-4 mt-3 ">
+
+    <div  class="col" *ngFor="let location of alllocations | filter:searchTerm:'name'" >
+      <div  class="card mt-5 mx-4" style="height: 620px;background-color: rgb(170, 231, 170);">
+        <img style="height: 220px;" [src]="location.image" class="card-img-top p-4" alt="...">
+        <div class="card-body mb-0">
+          <h5 class="card-title" >{{location.name}}</h5> <hr>
+          <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+
+          <ul class="list-group list-group-flush " >
+            <li class="list-group-item"> <strong>Category:</strong> &nbsp; {{location.category}} </li>
+            <li class="list-group-item"><strong>location:</strong>  &nbsp; <p style="text-align: justify;">{{location.location}}</p> </li>
+            <li class="list-group-item"><strong>Contact:</strong>  &nbsp; {{location.contact}}</li>
+          </ul>
+          <hr>
+          
+          <div class="text-center mt-3"><a class="btn btn-outline-primary mt-auto" routerLink="viewlocation//{{location.id}}">View More</a></div>
+
+        </div>
+        
+      </div>
+    </div>
+
+  </div>
+  
